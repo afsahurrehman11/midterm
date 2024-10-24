@@ -1,0 +1,101 @@
+/* src/App.css */
+
+/* Global styles */
+.App {
+  font-family: 'Roboto', sans-serif; /* Changed to a modern, clean font */
+  padding: 1rem;
+}
+
+.theme-toggle {
+  margin: 1rem 0;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Grid layout */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.movie-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.load-more-btn {
+  grid-column: span 3; /* Load more button takes up full width in grid */
+  margin: 2rem auto;
+  padding: 0.75rem 2rem;
+  background-color: #28a745;
+  color: white;
+}
+
+.load-more-btn:hover {
+  background-color: #218838;
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Dark and Light Themes */
+.light {
+  background-color: white;
+  color: #000;
+}
+
+.dark {
+  background-color: #121212;
+  color: #f0d36b;
+}
+
+.dark button {
+  background-color: #f0d36b;
+  color: black;
+}
+
+.dark button:hover {
+  background-color: gold;
+}
+
+.dark .movie-card {
+  background-color: #2c2c2c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .movie-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
